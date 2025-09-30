@@ -1,0 +1,128 @@
+/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* GRID - Basic Concepts of grid layout (grid-basics.html)
+   ========================================================================== */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px repeat(2, 1fr);
+  grid-template-rows: 100px 200px 50px;
+  gap: 10px;
+}
+
+.wrapper div:nth-child(1) {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "navigation main main sidebar"
+    "footer footer footer footer";
+}
+
+#item-a {
+  grid-area: header;
+}
+#item-b {
+  grid-area: navigation;
+}
+#item-c {
+  grid-area: main;
+}
+#item-d {
+  grid-area: sidebar;
+}
+#item-e {
+  grid-area: footer;
+}
