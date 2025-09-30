@@ -34,13 +34,12 @@
           data-bs-ride="carousel"
         >
           <!-- Carousel Indicators -->
-          <div class="carousel-indicators">
+          <!-- Lab2.3 Reposition the .carousel-indicators using the Bootstrap utility classes -->
+          <div class="carousel-indicators position-absolute top-0 start-0">
             <button
               type="button"
               data-bs-target="#carouselExample"
               data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
               aria-label="Slide 1"
             ></button>
             <button
@@ -55,28 +54,69 @@
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <!-- Lab2.4 Change the Carousel such that the last slide is the one that is the first one to appear when the page is loaded. -->
+            <button
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide-to="4"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 5"
+            ></button>
           </div>
           <!-- .carousel-indicators -->
           <div class="carousel-inner">
-            <figure class="carousel-item active">
+            <figure class="carousel-item">
               <img src="img/car1.jpg" class="d-block w-100" alt="C9R" />
-              <figcaption class="carousel-caption position-absolute top-0 pt-1">
+              <!-- Lab2.2 Using custom.css, reposition the .carousel-caption so that it appears back down at the bottom of each slide. -->
+              <figcaption
+                class="carousel-caption position-absolute bottom-0 pb-1"
+              >
                 <h5>C9R</h5>
                 <p>A really fast coupe</p>
               </figcaption>
             </figure>
             <figure class="carousel-item">
               <img src="img/car2.jpg" class="d-block w-100" alt="C9" />
-              <figcaption class="carousel-caption position-absolute top-0 pt-1">
+              <figcaption
+                class="carousel-caption position-absolute bottom-0 pb-1"
+              >
                 <h5>C9</h5>
                 <p>A really quick grocery-getter</p>
               </figcaption>
             </figure>
             <figure class="carousel-item">
               <img src="img/car3.jpg" class="d-block w-100" alt="X9X" />
-              <figcaption class="carousel-caption position-absolute top-0 pt-1">
+              <figcaption
+                class="carousel-caption position-absolute bottom-0 pb-1"
+              >
                 <h5>X9X</h5>
                 <p>A crazy-fun offroader</p>
+              </figcaption>
+            </figure>
+            <!-- Lab2.1 Add two more slides to the carousel with different captions and images – use the provided JPG image files in the img/ directory. -->
+            <figure class="carousel-item">
+              <img src="img/car4.jpg" class="d-block w-100" alt="X9X" />
+              <figcaption
+                class="carousel-caption position-absolute bottom-0 pb-1"
+              >
+                <h5>X9</h5>
+                <p>Part of crazy-fun offroader</p>
+              </figcaption>
+            </figure>
+            <figure class="carousel-item active">
+              <img src="img/car5.jpg" class="d-block w-100" alt="X9X" />
+              <figcaption
+                class="carousel-caption position-absolute bottom-0 pb-1"
+              >
+                <h5>X9F</h5>
+                <p>Mobility of the future</p>
               </figcaption>
             </figure>
           </div>

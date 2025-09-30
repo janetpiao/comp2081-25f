@@ -1,8 +1,11 @@
 // Custom JavaScript
 // STEP 15: Call up the carousel using the id, and use the .carousel() method create the options object
+
 const carouselCars = document.querySelector("#carouselExample");
 const carousel = new bootstrap.Carousel(carouselCars, {
   interval: 1500,
+  // Modify custom.js so that the Carousel cannot be controlled using the left and right arrow keys on the keyboard.
+  keyboard: false,
   wrap: true,
 });
 
