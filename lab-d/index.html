@@ -1,39 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Lab D | 2D CSS Transforms</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body {
-            font-family: sans-serif;
-            background-repeat: no-repeat;
+      body {
+        font-family: sans-serif;
+        background-repeat: no-repeat;
+        margin-left: 100px;
+        margin-top: 100px;
+      }
+      p {
+        height: 100px;
+        width: 100px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 40px;
+        transform-origin: 0 50%;
+      }
+      p#rotate {
+        background-color: orange;
+        transform: rotate(-30deg);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+      p#rotate:hover {
+        transform: rotate(90deg);
+      }
+      p#scale {
+        background-color: purple;
+        transform: scale(1.5, 0.5);
+        transition-property: transform, background-color;
+        transition-duration: 2s;
+      }
+      p#scale:hover {
+        transform: scale(0.5, 2.5);
+        background-color: blue;
+      }
+      p#skew {
+        background-color: limegreen;
+        transform: skew(-50deg, 20deg);
+        transition-property: transform;
+        transition-duration: 0.8s;
+      }
+      p#skew:hover {
+        transform: skew(160deg, -20deg);
+      }
+      p#translate {
+        background-color: hotpink;
+        transform: translate(100px, 20px);
+        transition-property: transform, background-color;
+        transition-duration: 0.4s;
+      }
+      p#translate:hover {
+        transform: translate(360px, -400px);
+        background-color: orange;
+      }
+      p#unique {
+        background-color: rgb(142, 197, 249);
+        font-weight: bold;
+        position: relative;
+        left: 0;
+        /* animation */
+        animation-name: ski;
+        animation-duration: 2s;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+      }
+      @keyframes ski {
+        from {
+          left: -500px;
         }
-        p {
-            height: 100px;
-            width: 100px;
-            color: white;
-            font-weight: bold;
-            text-align: center;
+        /* set time */
+        20% {
+          left: 400px;
+          font-size: 250%;
+          background-color: rgb(0, 51, 144);
         }
-        p#rotate {
-            background-color: orange;
+        60% {
+          left: -50px;
+          font-size: 175%;
+          background-color: rgb(142, 197, 249);
         }
-        p#scale {
-            background-color: purple;
+        80% {
+          left: 200px;
+          font-size: 120%;
+          background-color: rgb(0, 51, 144);
         }
-        p#skew {
-            background-color: limegreen;
+        /* final key frame */
+        to {
+          left: 0px;
         }
-        p#translate {
-            background-color: hotpink;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <p id="rotate">Rotate me.</p>
     <p id="scale">Scale me.</p>
     <p id="skew">Skew me.</p>
     <p id="translate">Translate me.</p>
-</body>
+    <p id="unique">Unique me.</p>
+  </body>
 </html>
