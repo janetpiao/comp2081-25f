@@ -1,128 +1,38 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  font: 150%/1.4 Roboto, sans-serif;
+}
+/* STEP 3: Apply a background gradient image to the page (http://colorzilla.com/gradient-editor/) */
+body {
+  background: linear-gradient(to bottom, #2568ba 0%, #a2c8e5 50%);
+}
+#container {
+  margin: 1rem;
+}
+/* STEP 4: CSS Image Replacement (https://css-tricks.com/the-image-replacement-museum/) */
+header h1 {
+  height: 160px;
+  width: 250px;
+  background: url("../images/silly-putty.png") no-repeat;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+header h1 strong {
+  visibility: hidden;
+}
+/* STEP 5: Add the 'Chewy' font from Google's Font Service and apply it to all H2 and H3 elements - add the @import to the top of the CSS file */
+h2,
+h3 {
+  font-family: Chewy;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* GRID - Basic Concepts of grid layout (grid-basics.html)
-   ========================================================================== */
-
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout */
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px repeat(2, 1fr);
-  grid-template-rows: 100px 200px 50px;
-  gap: 10px;
-}
-
-.wrapper div:nth-child(1) {
-  grid-column: 2/4;
-  grid-row: 2/3;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header header header"
-    "navigation main main sidebar"
-    "footer footer footer footer";
-}
-
-#item-a {
-  grid-area: header;
-}
-#item-b {
-  grid-area: navigation;
-}
-#item-c {
-  grid-area: main;
-}
-#item-d {
-  grid-area: sidebar;
-}
-#item-e {
-  grid-area: footer;
+#transforms h3:nth-of-type(2) {
+  display: inline-block;
+  outline: 2px dashed yellow;
+  transform-origin: 10px 10px 10px;
+  /* transform: rotateX(45deg); */
+  /* transform: rotateY(45deg); */
+  /* transform: rotateZ(45deg); */
+  /* transform: rotate(30deg); */
+  transform: rotate3d(1, 1, 1, 300deg);
 }

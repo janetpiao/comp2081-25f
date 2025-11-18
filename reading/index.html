@@ -1,163 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- STEP 1: Validate your HTML (http://validator.w3.org/) -->
   <head>
-    <!-- STEP 1: Always set character encoding first -->
     <meta charset="utf-8" />
-    <!-- STEP 2: Add the responsive viewport meta tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- STEP 3: Add a suitable title -->
-    <title>Bootstrap Grid | COMP2081</title>
-    <!-- STEP 4: Link to the Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-
-    <style>
-      /* STEP 9: Add diagnostic styles to visualize grid - remove when your layout is complete */
-      /* [class^="container"] {
-        outline: 3px solid red;
-      }
-      .row {
-        outline: 3px solid orange;
-      }
-      [class^="col"] {
-        outline: 3px solid limegreen;
-      } */
-    </style>
+    <title>CSS Silly Putty</title>
+    <!-- STEP 2: Normalize your CSS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <!-- STEP 3: Attach external CSS -->
+    <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- STEP 8: Build a fluid or a fixed-width container for proper alignment and padding of content (.container or .container-fluid)-->
-    <div class="container">
-      <!-- STEP 6: Build out your basic page-level containers, HEADER, MAIN, FOOTER -->
+    <div id="container">
       <header>
-        <!-- STEP 7: It is recommended that your H1 be placed in the HEADER, for proper document outline -->
-        <h1>Bootstrap Grid System</h1>
+        <h1>
+          <strong>CSS <em>Silly Putty</em></strong>
+        </h1>
+        <h2>Bend, Stretch and Twist Your Designs</h2>
+        <nav><!-- Global navigation would go here --></nav>
       </header>
       <main>
-        <!-- STEP 10: Build a row element using a <div class="row"> around the first 4 paragraphs and headings in the <main> -->
-        <!-- STEP 11: Build out your columns with a <div class="col">, noticing they will all be equal in width -->
-        <!-- STEP 12: There are 12 columns - modify each of the columns to span a different width by adding a number to each of the classes (.col-*) -->
-        <!-- STEP 13: Remove all numbers from the .col classes, and try targetting device widths (.col-sm, .col-md, .col-lg, .col-xl) -->
-        <!-- STEP 14: Combine device widths and column width settings (col-md-*) -->
-        <!-- STEP 15: Set different column widths for each of the device widths (col-sm-4 col-md-3 col-lg-5 col-xl-6, for example) -->
-        <div class="row">
-          <div class="col-12 col-sm-6 col-md-12 col-lg-3">
-            <h2>Lorem</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              hendrerit lobortis dui, eu congue neque placerat in. Aliquam
-              placerat porttitor lectus eu porta.
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <h2>Ipsum</h2>
-            <p>
-              Duis aliquet volutpat magna quis pharetra. Phasellus turpis dui,
-              suscipit lacinia velit quis, hendrerit pellentesque nibh. Nunc sed
-              leo sit amet dui ultricies lobortis ut id ex.
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <h2>Dolor</h2>
-            <p>
-              Donec efficitur libero at fringilla tempor. Etiam sodales arcu
-              vitae dui finibus tempor at venenatis nunc.
-            </p>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <h2>Sit</h2>
-            <p>
-              Cras sed suscipit nisi. Aenean commodo nunc eget tortor auctor
-              bibendum. Ut posuere arcu velit, vel tincidunt lectus sagittis et.
-            </p>
-          </div>
-        </div>
-        <!-- class row div -->
-        <!-- STEP 16: Build a second row element to capture the rest of the content inside the <main> -->
-        <div class="row">
-          <div class="col-2">
-            <h2>Amet</h2>
-            <p>
-              Cras sed suscipit nisi. Aenean commodo nunc eget tortor auctor
-              bibendum. Ut posuere arcu velit, vel tincidunt lectus sagittis et.
-            </p>
-          </div>
-          <div class="col-3">
-            <h2>Consectetur</h2>
-            <p>
-              Pellentesque gravida luctus pharetra. In felis neque, feugiat at
-              lacus eget, faucibus iaculis velit. Nullam tristique, justo eget
-              blandit finibus, dui justo aliquam ligula, sit amet iaculis quam
-              lectus sed ex.
-            </p>
-          </div>
-          <!-- STEP 17: Add 3 columns, with 2, 3, and 7 as the spans - the last column will contain the last 3 headings and paragraphs -->
-          <!-- STEP 18: Create 3 rows inside the last column, each with one column -->
-          <div class="col-7">
-            <div class="row">
-              <div class="col-6">
-                <h2>Adipiscing</h2>
-                <p>
-                  Sed ac mi ut ante mollis tristique. In sed nisl quis est
-                  sollicitudin varius non et velit. Sed turpis nunc, varius
-                  vitae iaculis ut, viverra eget neque.
-                </p>
-              </div>
-              <div class="col-6">
-                <h2>Elit</h2>
-                <p>
-                  Morbi vel ipsum id dolor rutrum lacinia. Praesent ullamcorper
-                  vulputate libero a vestibulum. Cras mollis mollis magna, ut
-                  mattis lacus convallis vel.
-                </p>
-              </div>
-              <div class="col-12">
-                <h2>In Hendrerit</h2>
-                <p>
-                  Praesent accumsan, odio quis varius suscipit, nulla ante
-                  tincidunt nisl, non interdum quam eros nec nibh. Nulla eget
-                  dapibus metus, ac ultricies purus. Vestibulum et tristique
-                  felis.
-                </p>
-              </div>
-            </div>
-            <!-- class row div -->
-          </div>
-          <!-- class col div -->
-        </div>
-        <!-- class row div -->
+        <section id="transforms">
+          <h2>Transforms</h2>
+          <p>
+            2D transforms in CSS allow for various transformation to be applied
+            to elements, such as scaling or rotating. It is possible to apply
+            one or many transforms to a single element. This allows for effects
+            such as rotating text or images at an angle, and can be combined
+            with transitions to apply interactive effects such as scaling up
+            elements when the users interacts with them.
+          </p>
+          <h3>Applying a Transform</h3>
+          <p>
+            Two CSS properties have to be specified to apply a transform: the
+            transform property specifies the type(s) of transform(s) you want to
+            apply to the element and the transform-origin property sets the
+            point of origin from where the transform takes place.
+          </p>
+          <h3>Origin</h3>
+          <p>
+            The initial transform-origin value is 50% 50% which is the centre of
+            the element—50% from the left of the element and 50% from the top of
+            the element. The origin can be specified using either a length (in
+            the regular CSS units), a percentage or the keywords left, center or
+            right (for the X co-ordinate) and top, center or bottom for the Y
+            coordinate.
+          </p>
+          <h3>Translating</h3>
+          <p>
+            We'll start with a simple translate transform. This moves the
+            element from its original position in the document to the new
+            location specified by the X and Y co-ordinates supplied.
+          </p>
+          <h3>Scaling</h3>
+          <p>
+            The scale transform function scales the element it is applied on by
+            the value specified from the point of origin.
+          </p>
+          <h3>Skewing</h3>
+          <p>
+            The skew transform function skews the element along the X or Y axis,
+            or both. The value is specified in degrees (deg), and if only one
+            value is specified the skew on the Y axis is set to 0 or no skew.
+          </p>
+          <p>
+            As with other transform functions the X and Y directions can be
+            specified individually using skewX and skewY. If a negative value is
+            supplied the skew is performed in the opposite direction, i.e.
+            leaning to the right for a negative skew on the X axis, and from
+            bottom to top for a negative skew on the Y axis.
+          </p>
+          <h3>Rotating</h3>
+          <p>
+            The rotate transform function rotates the element around the point
+            of origin and as with skewing is specified in degrees. A negative
+            value will rotate the element anti-clockwise.
+          </p>
+          <h3>Combining Transforms</h3>
+          <p>
+            Multiple transforms can be applied to one transform property using a
+            space-separated list. When multiple transforms are used, they are
+            applied one after another linearly from left to right.
+          </p>
+        </section>
+        <section id="transitions">
+          <h2>Transitions</h2>
+          <h3>Setting Up a Transition</h3>
+          <p>
+            The first step in using CSS3 transitions is to define which elements
+            you want to apply the transition to and which CSS properties will be
+            used in the transition.
+          </p>
+          <p>This is done with the transition-property property.</p>
+          <p>
+            Next you'll define the duration of the transition. This is set with
+            the transition-duration property, which by default is 0 seconds, so
+            we add a time value, usually specified in seconds.
+          </p>
+          <h3>Delaying a Transition</h3>
+          <p>
+            By default the transition happens as soon as the specified element
+            is accessed, but the transition-delay property can be used to delay
+            the start of the transition.
+          </p>
+          <h3>Controlling Transition Velocity</h3>
+          <p>
+            As well as defining the timing of the transition, you can also
+            control the velocity. Instead of a smooth transition from A to B,
+            you can define a transition to speed up or slow down along its
+            duration. This is defined using a cubic bezier curve, which is a
+            common method in computer animation. To make this simpler to use in
+            CSS, there are a number of predefined curves: ease (the default),
+            linear, ease-in, ease-out, and ease-in-out.
+          </p>
+          <h3>Combining Transitions</h3>
+          <p>
+            As well as just specifying one property to transition, each of the
+            CSS3 transitions properties can take a comma-separated list of
+            values. This allows multiple properties to be transitioned on each
+            element, each with their own timing and velocity values.
+          </p>
+        </section>
       </main>
       <footer>
-        <p>
-          <small
-            >Learn more about the
-            <a
-              href="http://getbootstrap.com/css/#grid"
-              title="View the Bootstrap documentation for the Grid"
-              >Bootstrap Grid System</a
-            >.</small
-          >
-        </p>
+        <p><small>Copyright Silly Putty Inc.</small></p>
       </footer>
     </div>
-    <!-- container div -->
-    <!-- STEP 5: Add all the supporting JavaScript libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- STEP 19: Validate your code http://validator.w3.org/ -->
-    <!-- STEP 20: Imagine the endless layout possibilities! -->
+    <!-- #container -->
   </body>
 </html>
