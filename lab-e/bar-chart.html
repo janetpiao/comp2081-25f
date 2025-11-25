@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bar Chart | COMP2081 Advanced UI Design Using CSS Lab E</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <svg viewBox="0 0 500 500">
+      <!-- bars -->
+      <rect
+        x="200"
+        y="400"
+        height="300"
+        width="100"
+        fill="#ddd"
+        transform="rotate(180 200 400)"
+      />
+      <rect
+        id="barWedge"
+        x="200"
+        y="400"
+        height="0"
+        width="100"
+        fill="#003B36"
+        transform="rotate(180 200 400)"
+      />
+      <rect
+        x="400"
+        y="400"
+        height="300"
+        width="100"
+        fill="#DD2A36"
+        transform="rotate(180 400 400)"
+      />
+      <!-- text for bar chart -->
+      <text x="125" y="450" fill="#222" font-size="40">75%</text>
+      <text x="305" y="450" fill="#222" font-size="40">100%</text>
+    </svg>
+    <script src="js/charts.js"></script>
+  </body>
+</html>

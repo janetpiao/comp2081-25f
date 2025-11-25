@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+svg {
+  border: 5px dotted #ccc;
+  width: 80%;
+  height: auto;
+}
+#barWedge {
+  transition: all 0.3s;
+}
+/* Encourage user interaction with the rectangle chart by changing the cursor */
+svg:hover {
+  cursor: pointer;
+}
+/* Set up the height for the rectangle at zero to start with */
+svg:active #barWedge {
+  height: 0;
+}
+/* Set font-family for the text */
+svg text {
+  font-family: "Fascinate", sans-serif;
+}
