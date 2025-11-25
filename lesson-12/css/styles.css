@@ -10,12 +10,10 @@ svg {
 #pieWedge {
   transition: all 0.5s;
 }
-
 /* STEP 7: Encourage user interaction with the chart by changing the cursor */
 svg:hover {
   cursor: pointer;
 }
-
 /* STEP 8: Set up the dash and the space for the dashed line at zero to start with */
 svg:active #pieWedge {
   stroke-dasharray: 0 0;
