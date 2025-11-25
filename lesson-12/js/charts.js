@@ -1,8 +1,7 @@
 // STEP 11: Get length of path for circle (circumference)
 let path = document.querySelector("svg #pieWedge");
 console.log(path);
-let length = path.getTotallength(); // Circumference
-
+let length = path.getTotalLength(); // Circumference!!!
 // STEP 12: Set the length of the space between dashes to the full circumference
 path.setAttribute("stroke-dasharray", "0 " + length);
 // STEP 13: Dynamically set the width of the pie segment to reflect the text value
